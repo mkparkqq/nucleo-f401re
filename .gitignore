@@ -1,0 +1,19 @@
+# 빌드 결과물
+*.o
+*.elf
+*.bin
+*.map
+*.lst
+
+# 빌드 디렉토리
+build/
+
+# macOS
+.DS_Store
+
+# vim swap
+*.swp
+*.swo
+
+# 임시 출력 파일
+claude-output.txt
