@@ -236,6 +236,11 @@ quit                              GDB 종료
 **시리얼 포트:** `/dev/cu.usbmodem11203` (연결 시마다 번호가 달라질 수 있음)
 
 ```bash
+# minicom 사용 (권장 - macOS에서 안정적으로 동작)
+minicom --noinit -D /dev/cu.usbmodem11203 -b 115200
+
+# 종료: Ctrl+A 입력 후 Q 입력
+
 # screen 사용 (macOS 기본 포함)
 screen /dev/cu.usbmodem11203 115200
 
