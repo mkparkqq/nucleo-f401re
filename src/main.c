@@ -56,6 +56,10 @@ static void MX_USART2_UART_Init(void) {
 /* HAL_UART_Init() 내부에서 호출되는 MSP(MCU Support Package) 콜백.
  * 클럭 활성화 및 GPIO 핀 설정을 담당한다.
  * Nucleo-F401RE: USART2_TX=PA2, USART2_RX=PA3 (AF7), ST-Link USB-UART 브릿지에 연결 */
+void SysTick_Handler(void) {
+    HAL_IncTick();
+}
+
 void HAL_UART_MspInit(UART_HandleTypeDef *huart) {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 
